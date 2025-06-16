@@ -11,6 +11,11 @@ app.use(cors());
 
 const PORT = process.env.PORT || 8000;
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the Todo AI Assistant testing url! It's working fine.");
+}
+);
+
 todo_status_System_Prompt = `you are an helpful ai assistant that helps users to update their todo priority status. 
             Consider user is the busy person and has a lot of tasks to do.
             you can update priorities from below options:
